@@ -10,11 +10,11 @@ const req = require('express/lib/request');
 const server = express()
 server.use(cors());
 server.use(express.json()); //read request body
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const client = new pg.Client(process.env.DATABASE_URL)
 
 //routes
-//http://localhost:3000
+//http://localhost:3001
 server.get('/', helloWorldHandler);
 server.get('/trending', trending);
 server.get('/popular', popular);
